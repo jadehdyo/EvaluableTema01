@@ -99,11 +99,3 @@ APP/
 1. Diseñada con fines educativos y de práctica en Android Studio y Kotlin.
 2. Algunas funciones (alarmas, llamadas) pueden no funcionar en emuladores sin soporte de teléfono o alarmas.
 
-### 8.- Ejemplo de ejecución
-
-#### Video 1 – Dispositivo Emulado
-[![Ver Video](imagen.jpg)](https://drive.google.com/file/d/ID_DEL_VIDEO/view?usp=sharing)
-
-#### Video 2 – Dispositivo Físico
-[![Ver Video](imagen2.jpg)](https://drive.google.com/file/d/ID_DEL_VIDEO/view?usp=sharing)
-

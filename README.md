@@ -15,17 +15,7 @@ Combina **interfaz sencilla**, **gestión de permisos en tiempo de ejecución** 
 
 ---
 
-## 2.- Capturas de Pantalla
-
-### Pantalla Principal
-![Pantalla Principal](docs/screenshots/main_activity.png)
-
-### Configuración de Teléfono
-![Configuración](docs/screenshots/conf_activity.png)
-
----
-
-## 3.- Funcionalidades Principales
+## 2.- Funcionalidades Principales
 
 1. **Llamada rápida (SOS)**  
    - Llama al número configurado desde la pantalla principal.
@@ -51,7 +41,7 @@ Combina **interfaz sencilla**, **gestión de permisos en tiempo de ejecución** 
 
 ---
 
-## 4.- Requisitos del Sistema
+## 3.- Requisitos del Sistema
 
 - Android Studio 2022 o superior.  
 - Dispositivo con Android 6.0 (API 23) o superior.  
@@ -61,9 +51,9 @@ Combina **interfaz sencilla**, **gestión de permisos en tiempo de ejecución** 
 
 ---
 
-## 5.- Instalación y Build
+## 4.- Instalación y Build
 
-1. Clona el repositorio:
+1. Clona el repositorio y ejecutalo:
 
 ```bash
 git clone https://github.com/tu_usuario/SOSPhone.git

@@ -8,7 +8,7 @@
 
 ## 1.- Descripción
 
-**SOSPhone** es una aplicación Android educativa desarrollada para estudiantes de 2DAM.  
+**EvaluableTema01** es una aplicación Android educativa desarrollada para estudiantes de 2DAM.  
 Permite realizar **llamadas rápidas**, configurar un número predeterminado, abrir URLs, reproducir sorpresas aleatorias y crear alarmas automáticamente.  
 
 Combina **interfaz sencilla**, **gestión de permisos en tiempo de ejecución** y **uso de SharedPreferences** para almacenar datos del usuario.

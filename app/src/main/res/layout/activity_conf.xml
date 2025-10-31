@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================
+  1.- Descripción general:
+       Interfaz de configuración inicial de la aplicación SOS Phone.
+       Permite al usuario introducir un número de teléfono de emergencia
+       que se almacenará en las preferencias compartidas del sistema.
+
+  1.1.- Estructura visual:
+       - Título de configuración.
+       - Campo de texto para introducir el número de teléfono.
+       - Botón para guardar el número y continuar.
+       - Texto informativo con la versión de la aplicación.
+
+  1.2.- Comportamiento esperado:
+       - El usuario introduce un número válido y presiona "Aceptar".
+       - La actividad valida el formato del número antes de continuar.
+       - Si es válido, se guarda en `SharedPreferences` y se lanza `MainActivity`.
+
+  1.3.- Dependencias:
+       - Se asocia con la clase lógica `ConfActivity.kt`.
+       - Usa ViewBinding: `ActivityConfBinding`.
+       - Fondo visual definido en `@drawable/base1`.
+
+  ============================================================
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base1"
+    tools:context=".ConfActivity">
+
+    <!--
+        2.- Título principal
+            Muestra el texto "Configuración" definido en los recursos de strings.
+    -->
+    <TextView
+        android:id="@+id/txt_conf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_configuracion"
+        android:textSize="26sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <!--
+        3.- Campo de entrada de teléfono
+            Permite al usuario introducir el número de contacto SOS.
+            Se valida en tiempo de ejecución desde `ConfActivity`.
+    -->
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="@string/txt_phone"
+        android:inputType="phone"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_conf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--
+        4.- Botón de confirmación
+            Guarda el número introducido y navega hacia la actividad principal.
+    -->
+    <Button
+        android:id="@+id/btn_conf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/txt_boton_aceptar"
+        app:layout_constraintTop_toBottomOf="@id/edit_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--
+        5.- Texto de versión
+            Muestra la versión actual de la aplicación al usuario.
+    -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_version_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

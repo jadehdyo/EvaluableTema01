@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================
+  1.- Descripción general:
+       Interfaz principal de la aplicación SOS Phone.
+       Permite al usuario:
+         - Activar una alarma del sistema.
+         - Enviar un mensaje SOS al número configurado.
+         - Ejecutar acciones aleatorias o abrir una URL específica.
+         - Consultar o modificar el número de teléfono actual.
+
+  1.1.- Estructura visual:
+       - Cuatro botones principales para las acciones (alarma, SOS, aleatorio, URL).
+       - Dos imágenes decorativas (león y gato).
+       - Texto informativo con el número de teléfono introducido.
+       - Icono que permite cambiar el número registrado.
+       - Animaciones o GIFs complementarios para estilo visual.
+
+  1.2.- Comportamiento esperado:
+       - `btnAlarma`: abre el intent del sistema para crear una alarma.
+       - `button` (SOS): realiza la acción de emergencia (por ejemplo, llamada o SMS).
+       - `btnAleatorio`: ejecuta una función secundaria definida en `MainActivity`.
+       - `btnUrl`: abre un navegador o vista web con la URL indicada.
+       - `iv_change_phone`: lanza `ConfActivity` para modificar el número guardado.
+
+  1.3.- Dependencias:
+       - Asociado a `MainActivity.kt`.
+       - Utiliza `ActivityMainBinding` para acceder a las vistas.
+       - Recursos gráficos: `@drawable/base2`, `@drawable/leon_negro`, `@drawable/gato1`, `@drawable/gato_gif`, `@drawable/teclado`.
+       - Recursos de texto y color definidos en `res/values`.
+
+  ============================================================
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base2"
+    tools:context=".MainActivity">
+
+    <!--
+        2.- Botón de alarma
+            Lanza un intent para abrir o configurar una alarma del sistema.
+    -->
+    <Button
+        android:id="@+id/btnAlarma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BotonAlarma"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159" />
+
+    <!--
+        3.- Botón SOS
+            Acción principal de emergencia.
+            Puede lanzar llamada, SMS o aviso dependiendo de la lógica implementada.
+    -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_SOS"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <!--
+        4.- Botón de acción aleatoria
+            Ejecuta una función o animación definida en MainActivity.
+    -->
+    <Button
+        android:id="@+id/btnAleatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BotonAleatorio"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnUrl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.828" />
+
+    <!--
+        5.- Botón URL
+            Abre un enlace web o recurso online asociado.
+    -->
+    <Button
+        android:id="@+id/btnUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BotonUrl"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <!--
+        6.- Imagen decorativa principal
+            Fondo visual temático con la figura del león.
+    -->
+    <ImageView
+        android:id="@+id/leon_negro"
+        android:layout_width="471dp"
+        android:layout_height="215dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/leon_negro" />
+
+    <!--
+        7.- Icono de cambio de número de teléfono
+            Al pulsar, redirige a la configuración de teléfono (ConfActivity).
+    -->
+    <ImageView
+        android:id="@+id/iv_change_phone"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/gato1" />
+
+    <!--
+        8.- Texto descriptivo del número guardado
+            Indica el teléfono actualmente configurado por el usuario.
+    -->
+    <TextView
+        android:id="@+id/pre_txt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="476dp"
+        android:text="Teléfono Introducido = "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--
+        9.- Valor del teléfono actual
+            Campo dinámico que muestra el número leído desde SharedPreferences.
+    -->
+    <TextView
+        android:id="@+id/txt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="516dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/pre_txt_phone" />
+
+    <!--
+        10.- Texto de referencia o etiqueta inferior
+            Puede incluir información adicional o decorativa.
+    -->
+    <TextView
+        android:id="@+id/texto_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:text="@string/texto_back"
+        android:textColor="#86050F"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+    <!--
+        11.- Imagen decorativa animada (gato)
+            Añade dinamismo visual al layout principal.
+    -->
+    <ImageView
+        android:id="@+id/gato_gif"
+        android:layout_width="67dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="320dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.135"
+        app:srcCompat="@drawable/gato_gif" />
+
+    <!--
+        12.- Imagen decorativa animada (teclado)
+            Complementa la interfaz superior con estilo tecnológico.
+    -->
+    <ImageView
+        android:id="@+id/teclado_gif"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.135"
+        app:srcCompat="@drawable/teclado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

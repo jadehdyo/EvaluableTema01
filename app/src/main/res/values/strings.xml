@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        1.- INFORMACIÓN GENERAL DE LA APLICACIÓN
+        Contiene el nombre principal y la versión de la app visible para el usuario.
+    -->
+    <string name="app_name">EvaluableTema01</string>
+    <string name="txt_version_app">V1.0 (App 2DAM)</string>
+
+
+    <!--
+        2.- CONFIGURACIÓN Y PREFERENCIAS COMPARTIDAS
+        Se definen las claves y el archivo utilizado por SharedPreferences para guardar datos del usuario.
+    -->
+    <!-- 2.1.- Nombre del fichero donde se guardan las preferencias -->
+    <string name="name_preferen_shared_fich">shared_fich</string>
+
+    <!-- 2.2.- Clave utilizada para almacenar el número de teléfono configurado -->
+    <string name="name_shared_phone">phone_number</string>
+
+
+    <!--
+        3.- TEXTOS DE INTERFAZ DE CONFIGURACIÓN
+        Textos mostrados en la actividad ConfActivity para configurar el número de teléfono.
+    -->
+    <!-- 3.1.- Título de la pantalla de configuración -->
+    <string name="txt_configuracion">Configura el teléfono que quieras llamar</string>
+
+    <!-- 3.2.- Etiqueta del campo de entrada de número de teléfono -->
+    <string name="txt_phone">Número de Teléfono:</string>
+
+    <!-- 3.3.- Texto del botón que confirma la configuración -->
+    <string name="txt_boton_aceptar">Aceptar</string>
+
+
+    <!--
+        4.- MENSAJES DE VALIDACIÓN
+        Avisos que se muestran cuando el usuario introduce datos incorrectos o incompletos.
+    -->
+    <!-- 4.1.- Campo de teléfono vacío -->
+    <string name="msg_empty_phone">Debes introducir un teléfono válido</string>
+
+    <!-- 4.2.- Número de teléfono con formato no válido -->
+    <string name="msg_not_valid_phone">Teléfono no válido</string>
+
+    <!-- 4.3.- Se requiere un número distinto al anterior -->
+    <string name="msg_new_phone">Debes poner un nuevo teléfono</string>
+
+
+    <!--
+        5.- TEXTOS DE LA PANTALLA PRINCIPAL
+        Elementos de texto utilizados en la interfaz de la MainActivity.
+    -->
+    <!-- 5.1.- Mensaje principal de la pantalla SOS -->
+    <string name="txt_SOS">Llama a tu favorito</string>
+
+    <!-- 5.2.- Clave general utilizada para operaciones con teléfono -->
+    <string name="string_phone">phone</string>
+
+
+    <!--
+        6.- BOTONES Y ACCIONES DEL USUARIO
+        Etiquetas utilizadas en los botones que ejecutan distintas funciones.
+    -->
+    <!-- 6.1.- Botón para crear una alarma programada -->
+    <string name="BotonAlarma">Crea una alarma</string>
+
+    <!-- 6.2.- Botón para ejecutar una acción aleatoria -->
+    <string name="BotonAleatorio">Sorpresa aleatoria</string>
+
+    <!-- 6.3.- Botón para abrir una dirección URL -->
+    <string name="BotonUrl">Abre la Url</string>
+
+
+    <!--
+        7.- MENSAJES INFORMATIVOS ADICIONALES
+        Textos utilizados como notificaciones o mensajes de interfaz secundarios.
+    -->
+    <!-- 7.1.- Mensaje informativo sobre la alarma -->
+    <string name="textoAlarma">La alarma sonará en 2 minutos</string>
+
+    <!-- 7.2.- Texto del botón o enlace para volver atrás -->
+    <string name="texto_back">Púlsame para volver atrás —></string>
+
+</resources>

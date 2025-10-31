@@ -79,7 +79,7 @@ APP/
 ├─ app/
 │  ├─ src/main/
 │  │  ├─ java/com/example/sosphone/
-│  │  │  ├─ MainActivity.kt        # Lógica principal y botones de SOS
+│  │  │  ├─ MainActivity.kt        # Lógica principal y botones
 │  │  │  └─ ConfActivity.kt        # Configuración del número de teléfono
 │  │  ├─ res/
 │  │  │  ├─ layout/

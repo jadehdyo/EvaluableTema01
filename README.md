@@ -101,9 +101,9 @@ APP/
 
 ### 8.- Ejemplo de ejecución
 
-#### Video 1 – Llamada SOS
-[![Ver Video](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://drive.google.com/file/d/ID_DEL_VIDEO/view?usp=sharing)
+#### Video 1 – Dispositivo Emulado
+[![Ver Video](imagen.jpg)](https://drive.google.com/file/d/ID_DEL_VIDEO/view?usp=sharing)
 
-#### Video 2 – Alarma y Sorpresa Aleatoria
-[![Ver Video](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)](https://drive.google.com/file/d/ID_DEL_VIDEO/view?usp=sharing)
+#### Video 2 – Dispositivo Físico
+[![Ver Video](imagen2.jpg)](https://drive.google.com/file/d/ID_DEL_VIDEO/view?usp=sharing)
 

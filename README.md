@@ -73,7 +73,7 @@ git clone https://github.com/tu_usuario/SOSPhone.git
 ```bash
 ./gradlew assembleDebug
 ```
-## 6.- Estructura del proyecto
+## 6.- Estructura del proyecto (desactualizado)
 ```bash
 APP/
 ├─ app/

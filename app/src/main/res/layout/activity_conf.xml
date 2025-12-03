@@ -32,7 +32,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/base1"
+    android:background="@drawable/frierenmcdonals"
     tools:context=".ConfActivity">
 
     <!--
@@ -41,14 +41,15 @@
     -->
     <TextView
         android:id="@+id/txt_conf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="383dp"
+        android:layout_height="58dp"
         android:text="@string/txt_configuracion"
+        android:textColor="@color/white"
         android:textSize="26sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2" />
 
     <!--
@@ -56,23 +57,26 @@
             Permite al usuario introducir el número de contacto SOS.
             Se valida en tiempo de ejecución desde `ConfActivity`.
     -->
-    <EditText
-        android:id="@+id/edit_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:ems="10"
-        android:hint="@string/txt_phone"
-        android:inputType="phone"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/txt_conf"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <!--
         4.- Botón de confirmación
             Guarda el número introducido y navega hacia la actividad principal.
     -->
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:hint="@string/txt_phone"
+        android:inputType="phone"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_conf" />
+
     <Button
         android:id="@+id/btn_conf"
         android:layout_width="wrap_content"
@@ -94,5 +98,18 @@
         android:text="@string/txt_version_app"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/diceminigame"
+        android:layout_width="126dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_conf"
+        app:layout_constraintVertical_bias="0.772"
+        app:srcCompat="@drawable/vaso" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

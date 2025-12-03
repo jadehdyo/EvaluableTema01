@@ -5,7 +5,7 @@
         1.- INFORMACIÓN GENERAL DE LA APLICACIÓN
         Contiene el nombre principal y la versión de la app visible para el usuario.
     -->
-    <string name="app_name">EvaluableTema01</string>
+    <string name="app_name">CompletaTema1</string>
     <string name="txt_version_app">V1.0 (App 2DAM)</string>
 
 
@@ -82,5 +82,8 @@
 
     <!-- 7.2.- Texto del botón o enlace para volver atrás -->
     <string name="texto_back">Púlsame para volver atrás —></string>
+
+    <string name="volver_a_jugar">volver a jugar\n</string>
+    <string name="_0">0</string>
 
 </resources>

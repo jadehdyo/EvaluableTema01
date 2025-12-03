@@ -45,6 +45,7 @@ class ConfActivity : AppCompatActivity() {
 
         initPreferentShared()
         start()
+        diceMinigame()
     }
 
     /**
@@ -160,5 +161,17 @@ class ConfActivity : AppCompatActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
+    }
+
+
+    private fun diceMinigame() {
+        // ⭐️ SOLUCIÓN: Usar el ID correcto de la vista en activity_conf.xml
+        confBinding.diceminigame.setOnClickListener { // <-- Usando el nombre del binding: ivMinigame
+
+            val intent = Intent(this, DiceMinigame::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            }
+            startActivity(intent)
+        }
     }
 }

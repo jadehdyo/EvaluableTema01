@@ -28,6 +28,10 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".DiceMinigame"
+            android:exported="false" />
+        <activity android:name=".NumeroAcertado" android:exported="false" />
+        <activity
             android:name=".ConfActivity"
             android:exported="true" >
             <intent-filter>

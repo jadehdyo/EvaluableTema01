@@ -21,6 +21,8 @@ android {
         enable = true
     }
 
+
+
     buildTypes {
         release {
             isMinifyEnabled = false

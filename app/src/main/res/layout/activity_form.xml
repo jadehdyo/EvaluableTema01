@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FormActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título del Formulario -->
+        <TextView
+            android:id="@+id/tv_form_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/formulario_de_datos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- 1. Campo de Nombre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nombre_completo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 2. Campo de Texto Multilínea -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/texto_adicional_descripci_n"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View android:layout_height="1dp" android:layout_width="match_parent" android:background="@color/material_dynamic_neutral90" android:layout_marginTop="16dp"/>
+
+        <!-- 3. Checkboxes (Múltiples selecciones permitidas) -->
+        <TextView
+            android:id="@+id/tv_checkbox_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selecci_n_m_ltiple_checkboxes"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"/>
+
+        <CheckBox
+            android:id="@+id/cb_option_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opci_n_a_frutas" />
+
+        <CheckBox
+            android:id="@+id/cb_option_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opci_n_b_verduras" />
+
+        <CheckBox
+            android:id="@+id/cb_option_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opci_n_c_l_cteos" />
+
+        <View android:layout_height="1dp" android:layout_width="match_parent" android:background="@color/material_dynamic_neutral90" android:layout_marginTop="16dp"/>
+
+        <!-- 4. RadioButtons (Selección única) -->
+        <TextView
+            android:id="@+id/tv_radio_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selecci_n_nica_radiobuttons_obligatorio"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_option_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_1_prioridad_alta" />
+
+            <RadioButton
+                android:id="@+id/rb_option_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_2_prioridad_media" />
+
+            <RadioButton
+                android:id="@+id/rb_option_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_3_prioridad_baja" />
+        </RadioGroup>
+
+        <View android:layout_height="1dp" android:layout_width="match_parent" android:background="@color/material_dynamic_neutral90" android:layout_marginTop="16dp"/>
+
+        <!-- 5. DatePicker y Display -->
+        <TextView
+            android:id="@+id/tv_date_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seleccionar_fecha"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_date_display"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:paddingEnd="16dp"
+                android:textStyle="italic"
+                tools:text="Fecha: 01/01/2024" />
+
+            <Button
+                android:id="@+id/btn_date_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/elegir_fecha"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+        </LinearLayout>
+
+        <View android:layout_height="1dp" android:layout_width="match_parent" android:background="@color/material_dynamic_neutral90" android:layout_marginTop="16dp"/>
+
+        <!-- 6. Switch ON/OFF -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_on_off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:text="@string/activar_notificaciones" />
+
+        <View android:layout_height="1dp" android:layout_width="match_parent" android:background="@color/material_dynamic_neutral90" android:layout_marginTop="16dp"/>
+
+        <!-- 7. Contenedor de Botones (Horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:gravity="center">
+
+            <!-- Botón de Aceptar (Compartiendo espacio) -->
+            <Button
+                android:id="@+id/btn_accept"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:padding="12dp"
+                android:text="@string/aceptar_formulario"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"/>
+
+            <!-- Botón de Volver (Nuevo, Compartiendo espacio) -->
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:padding="12dp"
+                android:text="@string/volver_atr_s"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

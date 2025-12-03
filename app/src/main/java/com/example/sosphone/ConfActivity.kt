@@ -46,6 +46,7 @@ class ConfActivity : AppCompatActivity() {
         initPreferentShared()
         start()
         diceMinigame()
+        llamarForm()
     }
 
     /**
@@ -166,9 +167,20 @@ class ConfActivity : AppCompatActivity() {
 
     private fun diceMinigame() {
         // ⭐️ SOLUCIÓN: Usar el ID correcto de la vista en activity_conf.xml
-        confBinding.diceminigame.setOnClickListener { // <-- Usando el nombre del binding: ivMinigame
+        confBinding.diceminigame.setOnClickListener { // <-- Usando el nombre del binding: diceminigame
 
             val intent = Intent(this, DiceMinigame::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            }
+            startActivity(intent)
+        }
+    }
+
+    private fun llamarForm() {
+        // ⭐️ SOLUCIÓN: Usar el ID correcto de la vista en activity_conf.xml
+        confBinding.form.setOnClickListener { // <-- Usando el nombre del binding: form
+
+            val intent = Intent(this, FormActivity::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
             startActivity(intent)

@@ -85,5 +85,25 @@
 
     <string name="volver_a_jugar">volver a jugar\n</string>
     <string name="_0">0</string>
+    <string name="aceptar_formulario">Aceptar Formulario</string>
+    <string name="activar_notificaciones">Activar Notificaciones</string>
+    <string name="elegir_fecha">Elegir Fecha</string>
+    <string name="seleccionar_fecha">Seleccionar Fecha</string>
+    <string name="radio_3_prioridad_baja">Radio 3 (Prioridad Baja)</string>
+    <string name="radio_2_prioridad_media">Radio 2 (Prioridad Media)</string>
+    <string name="radio_1_prioridad_alta">Radio 1 (Prioridad Alta)</string>
+    <string name="selecci_n_nica_radiobuttons_obligatorio">Selección Única (RadioButtons - Obligatorio)</string>
+    <string name="opci_n_c_l_cteos">Opción C (Lácteos)</string>
+    <string name="opci_n_b_verduras">Opción B (Verduras)</string>
+    <string name="opci_n_a_frutas">Opción A (Frutas)</string>
+    <string name="selecci_n_m_ltiple_checkboxes">Selección Múltiple (Checkboxes)</string>
+    <string name="texto_adicional_descripci_n">Texto Adicional (Descripción)</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="formulario_de_datos">Formulario de Datos</string>
+
+    <string name="date_format">%1$d/%2$d/%3$d</string>
+    <string name="formulario">Formulario</string>
+    <string name="adivina_el_dado">Adivina el dado</string>
+    <string name="volver_atr_s">Volver atrás</string>
 
 </resources>

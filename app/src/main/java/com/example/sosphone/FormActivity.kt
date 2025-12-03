@@ -79,17 +79,16 @@ class FormActivity : AppCompatActivity() {
     private fun setupSubmitButton() {
         binding.btnAccept.setOnClickListener {
             if (validateForm()) {
-                Toast.makeText(this, "✅ Formulario Correcto: Todos los campos válidos.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Formulario Correcto: Todos los campos válidos.", Toast.LENGTH_LONG).show()
             } else {
-                Toast.makeText(this, "❌ Formulario Incorrecto: Revisa los campos obligatorios.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Formulario Incorrecto: Revisa los campos obligatorios.", Toast.LENGTH_LONG).show()
             }
         }
     }
 
 
     private fun atrasForm() {
-        // ⭐️ SOLUCIÓN: Usar el ID correcto de la vista en activity_conf.xml
-        binding.btnBack.setOnClickListener { // <-- Usando el nombre del binding: form
+        binding.btnBack.setOnClickListener {
 
             val intent = Intent(this, ConfActivity::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)

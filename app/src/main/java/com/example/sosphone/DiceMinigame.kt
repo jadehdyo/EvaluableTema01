@@ -1,6 +1,7 @@
 package com.example.sosphone
 
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -29,6 +30,7 @@ class DiceMinigame: AppCompatActivity() {
         binding = ActivityDiceminigameBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initEvent()
+        getBack()
     }
 
     private fun initEvent() {
@@ -150,6 +152,17 @@ SOLO si el resultado coincide con el valor esperado.
 
             // No se lanza ninguna Activity, la ejecución de viewResult() termina aquí.
             // El usuario se queda en la pantalla para volver a pulsar el botón de juego.
+        }
+    }
+
+    private fun getBack(){
+        binding.atrasGato.setOnClickListener {
+
+            val intent = Intent(this, ConfActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                putExtra("back", true)
+            }
+            startActivity(intent)
         }
     }
 }

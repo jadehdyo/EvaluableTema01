@@ -57,7 +57,7 @@ Combina **interfaz sencilla**, **gestión de permisos en tiempo de ejecución** 
 1. Clona el repositorio y ejecutalo:
 
 ```bash
-git clone https://github.com/tu_usuario/SOSPhone.git
+git clone https://github.com/jadehdyo/EvaluableTema01.git
 
 ```
 

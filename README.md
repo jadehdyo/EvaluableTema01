@@ -21,9 +21,10 @@ Combina **interfaz sencilla**, **gestión de permisos en tiempo de ejecución** 
    - Llama al número configurado desde la pantalla principal.
    - Verifica permisos `CALL_PHONE` en tiempo de ejecución.
 
-2. **Configuración de número de teléfono**  
-   - Pantalla de configuración (`ConfActivity`) para guardar el número favorito.
-   - Validación de número utilizando **Google libphonenumber**.
+2. **Acceso a Funciones Secundarias (desde `ConfActivity`)**
+   - Formulario de Configuración de Número: Permite al usuario guardar el número de teléfono favorito.
+   - Validación de número utilizando Google libphonenumber.
+   - Minijuego "Adivina el Número": Un juego donde el usuario debe adivinar el número que sale al tirar unos dados.
 
 3. **Abrir URL aleatoria**  
    - Botón que abre la página [The Useless Web](https://theuselessweb.com/).
@@ -77,19 +78,23 @@ git clone https://github.com/tu_usuario/SOSPhone.git
 ```bash
 APP/
 ├─ app/
-│  ├─ src/main/
-│  │  ├─ java/com/example/sosphone/
-│  │  │  ├─ MainActivity.kt        # Lógica principal y botones
-│  │  │  └─ ConfActivity.kt        # Configuración del número de teléfono
-│  │  ├─ res/
-│  │  │  ├─ layout/
-│  │  │  │  ├─ activity_main.xml
-│  │  │  │  └─ activity_conf.xml
-│  │  │  ├─ drawable/
-│  │  │  ├─ values/
-│  │  │  │  └─ strings.xml
-│  │  │  └─ mipmap/
-│  │  └─ AndroidManifest.xml
+│  ├─ src/main/
+│  │  ├─ java/com/example/sosphone/
+│  │  │  ├─ MainActivity.kt        # Lógica principal y botones de la pantalla principal
+│  │  │  ├─ ConfActivity.kt        # Pantalla con ImageViews para elegir el Formulario o Minijuego
+│  │  │  ├─ FormActivity.kt        # Lógica del formulario de configuración de número
+│  │  │  └─ DiceGameActivity.kt    # Lógica del minijuego de adivinar el número
+│  │  ├─ res/
+│  │  │  ├─ layout/
+│  │  │  │  ├─ activity_main.xml
+│  │  │  │  ├─ activity_conf.xml
+│  │  │  │  ├─ activity_form.xml
+│  │  │  │  └─ activity_dice_game.xml
+│  │  │  ├─ drawable/
+│  │  │  ├─ values/
+│  │  │  │  └─ strings.xml
+│  │  │  └─ mipmap/
+│  │  └─ AndroidManifest.xml
 ├─ build.gradle
 └─ README.md
 ```
